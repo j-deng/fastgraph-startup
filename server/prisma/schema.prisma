@@ -1,0 +1,106 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+/// @Permission auth_control|auth_read, write: auth_control
+model User {
+  id          Int       @id @default(autoincrement())
+  /// @Column width: 120, ellipsis: true
+  /// @Filter preload: true, size: 50
+  /// @Validation email: true
+  email       String?   @unique
+  /// @Readonly
+  /// @Validation min: 1, max: 50
+  /// @Filter select: true
+  username    String    @unique @db.VarChar(100)
+  /// @Form a-input-password
+  /// @Validation min: 6, max: 50
+  /// @Omit read: true
+  /// @Transform hashPassword
+  password    String?
+  /// @Validation min: 1, max: 50
+  nickname    String?
+  /// @Filter
+  gender      Gender    @default(Male)
+  /// @Omit index: true
+  tel         String?   @unique
+  /// @Field 'is staff'
+  isStaff     Boolean   @default(false)
+  /// @Field Active
+  isActive    Boolean   @default(true)
+  /// @Filter
+  /// @Field 'Superuser'
+  isSuperuser Boolean   @default(false)
+  /// @Readonly
+  /// @Filter range: true
+  dateJoined  DateTime  @default(now())
+  /// @Omit index: true
+  updatedAt   DateTime? @updatedAt
+
+  /// @RefShowField name
+  groups      Group[]
+  /// @RefShowField name
+  permissions Permission[]
+  /// @Omit
+  Token       Token[]
+}
+
+/// @Permission write: auth_control
+model Permission {
+  /// @Field ID
+  id       Int    @id @default(autoincrement())
+  /// @Validation min: 1, max: 50
+  /// @Field Code
+  codename String @unique
+  /// @Filter search: true
+  /// @Validation min: 1, max: 50
+  /// @Field 'Permission name'
+  name     String
+
+  /// @Omit
+  groups Group[]
+  /// @Omit
+  users  User[]
+}
+
+/// @Permission write: auth_control
+model Group {
+  /// @Field ID
+  id   Int    @id @default(autoincrement())
+  /// @Validation min: 1, max: 50
+  /// @Field 'Group name'
+  name String @unique
+
+  /// @Filter
+  /// @RefShowField name
+  permissions Permission[]
+  /// @Omit
+  users       User[]
+}
+
+/// @Permission superuser
+model Token {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  /// @Filter
+  /// @Ref User, field: username, from: userId, to: id
+  user         User     @relation(fields: [userId], references: [id])
+  /// @Column width: 120, ellipsis: true
+  accessToken  String
+  /// @Column width: 120, ellipsis: true
+  refreshToken String
+  ip           String?
+  createdAt    DateTime @default(now())
+}
+
+// enum decorator is optional, the values are as i18n key
+/// @Enum Male: Male, Female: Female
+enum Gender {
+  Male
+  Female
+}

@@ -1,0 +1,47 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "author": "j-deng",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "node-dev ./src/index.ts",
+    "compile": "tsc",
+    "test": "jest",
+    "migrate:dev": "prisma migrate dev",
+    "migrate:reset": "prisma migrate reset",
+    "migrate:create": "prisma migrate dev --create-only",
+    "createsuperuser": "ts-node scripts/create-superuser.ts",
+    "format": "prettier --write --parser typescript {src,tests,scripts}/**/*.ts"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/jest": "^26.0.23",
+    "@types/jsonwebtoken": "^8.5.1",
+    "@types/node": "^15.12.4",
+    "jest": "^27.0.3",
+    "node-dev": "^7.0.0",
+    "prettier": "^2.3.0",
+    "prisma": "^3.10.0",
+    "ts-jest": "^27.0.2",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.10.0",
+    "apollo-server": "^3.6.3",
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "dataloader": "^2.0.0",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "fastgraph-node": "^0.1.0",
+    "graphql": "^16.3.0",
+    "graphql-fields-list": "^2.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "nodejs-snowflake": "^2.0.0",
+    "reflect-metadata": "^0.1.13"
+  }
+}
