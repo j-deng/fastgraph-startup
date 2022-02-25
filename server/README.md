@@ -42,6 +42,10 @@ yarn createsuperuser
 yarn dev
 ```
 
+### vscode setup
+
+Install [prisma language tool](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma) and [fastgraph-vscode](https://marketplace.visualstudio.com/items?itemName=j-deng.fastgraph-vscode)
+
 ## Prisma
 
 Project use [Prisma](https://www.prisma.io/) as ORM.
