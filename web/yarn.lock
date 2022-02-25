@@ -741,9 +741,9 @@ estree-walker@^2.0.2:
   integrity sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=
 
 fastgraph-vue@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmmirror.com/fastgraph-vue/-/fastgraph-vue-0.1.0.tgz#c109f7c45482bc5b864580c584aeb58a22b4cab2"
-  integrity sha512-dp9O/UUPpPlxI7z606xObMnxfccRN3RhSAjRvzaaURrBJyveiMETqNCPe4sAIYvKwxhVIhhsZGE3Lz4g3AQPQA==
+  version "0.1.1"
+  resolved "https://registry.npmmirror.com/fastgraph-vue/-/fastgraph-vue-0.1.1.tgz#70818002f57c2516259bf052ca6880b7dc277313"
+  integrity sha512-jEM/co6Sh37EzbcmBCB+SpE5GAIO3jTiLf924vmipyWR4xmS3/ldUP8C7dMLKHv22C7DyHPhxV2Es1jEu7fuew==
   dependencies:
     joi "^17.6.0"
     lodash-es "^4.17.21"
