@@ -40,7 +40,7 @@ import { message } from 'ant-design-vue'
 import gql from 'graphql-tag'
 import { defineComponent, reactive, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from 'vuex'
+import { useStore } from '@/store'
 
 const SET_PROFILE_MUTATION = gql`
   mutation ($nickname: String!, $gender: String!) {
@@ -48,11 +48,17 @@ const SET_PROFILE_MUTATION = gql`
   }
 `
 
+interface ProfileFormState {
+  username: string | undefined
+  nickname: string | undefined
+  gender: 'Male' | 'Female' | undefined
+}
+
 export default defineComponent({
   setup() {
-    const formState = reactive({
-      username: '',
-      nickname: '',
+    const formState = reactive<ProfileFormState>({
+      username: undefined,
+      nickname: undefined,
       gender: undefined
     })
 

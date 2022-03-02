@@ -1,6 +1,6 @@
 import gql from 'graphql-tag'
+import { store } from '@/store'
 import { makeRefreshAuthClient, updateApolloLink } from '../apollo'
-import store from '../store'
 
 export function updateAuthContext(data?: any) {
   if (!data) {

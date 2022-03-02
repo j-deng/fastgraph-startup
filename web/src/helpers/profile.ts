@@ -1,6 +1,6 @@
 import gql from 'graphql-tag'
-import { apolloClient } from '../apollo'
-import { UserProfile } from '../store/modules/auth'
+import { apolloClient } from '@/apollo'
+import { UserProfile } from '@/store/modules/auth'
 
 export const USER_PROFILE_QUERY = gql`
   query {

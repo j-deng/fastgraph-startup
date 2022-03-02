@@ -53,7 +53,7 @@ import {
   NotificationOutlined
 } from '@ant-design/icons-vue'
 import { computed, defineComponent, provide, ref, watch } from 'vue'
-import { useStore } from 'vuex'
+import { useStore } from '@/store'
 import SiderMenu from './default/SiderMenu.vue'
 import UserHeader from './default/UserHeader.vue'
 import useMenus from './default/menus'

@@ -21,7 +21,7 @@ export default defineComponent({
   },
 
   setup() {
-    const activeKey = ref(1)
+    const activeKey = ref('profile')
     return {
       activeKey
     }

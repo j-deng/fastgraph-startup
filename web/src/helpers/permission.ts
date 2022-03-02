@@ -1,9 +1,9 @@
-import { useStore } from 'vuex'
 import {
   ResourceItem,
   ResourceRoute,
   getResourcePermissions
 } from 'fastgraph-vue'
+import { useStore } from '@/store'
 
 export default function usePermission() {
   const store = useStore()

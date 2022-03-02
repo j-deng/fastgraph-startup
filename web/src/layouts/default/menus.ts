@@ -1,8 +1,8 @@
 import { computed, Ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { useStore } from 'vuex'
+import { useStore } from '@/store'
 import { useTranslation } from 'fastgraph-vue'
-import usePermission from '../../helpers/permission'
+import usePermission from '@/helpers/permission'
 
 export interface AppMenu {
   key: string

@@ -57,9 +57,9 @@ import type { UnwrapRef } from 'vue'
 import { FormProps, message } from 'ant-design-vue'
 import { useMutation } from '@vue/apollo-composable'
 import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
+import { useStore } from '@/store'
 import { useTranslation } from 'fastgraph-vue'
-import { LOGIN_MUTATION, updateAuthContext } from '../../helpers/auth'
+import { LOGIN_MUTATION, updateAuthContext } from '@/helpers/auth'
 
 interface FormState {
   username: string

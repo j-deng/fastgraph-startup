@@ -30,7 +30,7 @@ import { computed, createVNode, defineComponent } from 'vue'
 import { useTranslation } from 'fastgraph-vue'
 import { message, Modal } from 'ant-design-vue'
 import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
+import { useStore } from '@/store'
 import LocaleSetter from './LocaleSetter.vue'
 
 export default defineComponent({

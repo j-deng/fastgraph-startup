@@ -7,7 +7,7 @@ import App from './App.vue'
 import router from './routes'
 import { apolloClient } from './apollo'
 import { i18n } from './i18n'
-import store from './store'
+import { store, key } from './store'
 
 const app = createApp({
   setup() {
@@ -20,6 +20,6 @@ const app = createApp({
 app.use(Antd)
 app.use(router)
 app.use(i18n)
-app.use(store)
+app.use(store, key)
 app.use(fg)
 app.mount('#app')

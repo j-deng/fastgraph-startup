@@ -8,13 +8,13 @@ import {
 import { onError } from '@apollo/client/link/error'
 import { setContext } from '@apollo/client/link/context'
 import router from './routes'
+import { store } from './store'
 import {
   getAccessToken,
   getRefreshToken,
   refreshAuth,
   updateAuthContext
 } from './helpers/auth'
-import store from './store'
 
 let _currentSchemaVersion = localStorage.getItem('schemaVersion')
 
