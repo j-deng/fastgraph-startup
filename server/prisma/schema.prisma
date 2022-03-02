@@ -88,7 +88,7 @@ model Token {
   id           Int      @id @default(autoincrement())
   userId       Int
   /// @Filter
-  /// @Ref User, field: username, from: userId, to: id
+  /// @RefShowField username
   user         User     @relation(fields: [userId], references: [id])
   /// @Column width: 120, ellipsis: true
   accessToken  String
