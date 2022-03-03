@@ -1,10 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { Entry as ResourceEntry } from 'fastgraph-vue'
-import Home from './components/Home.vue'
+import { Entry } from 'fastgraph-vue'
 import DefaultLayout from './layouts/DefaultLayout.vue'
-import UserResource from './components/UserResource.vue'
-import Login from './components/user/Login.vue'
-import UserProfile from './components/user/UserProfile.vue'
 
 const routes = [
   {
@@ -14,25 +10,25 @@ const routes = [
     children: [
       {
         path: 'index',
-        component: Home
+        component: () => import('./components/Home.vue')
       },
       {
         path: 'resource/:key',
-        component: ResourceEntry
+        component: Entry
       },
       {
         path: 'resource/User',
-        component: UserResource
+        component: () => import('./components/UserResource.vue')
       },
       {
         path: '/user/profile',
-        component: UserProfile
+        component: () => import('./components/user/UserProfile.vue')
       }
     ]
   },
   {
     path: '/user/login',
-    component: Login
+    component: () => import('./components/user/Login.vue')
   }
 ]
 
