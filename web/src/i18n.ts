@@ -15,6 +15,8 @@ const zhCN = {
   Search: '查询',
   Clear: '重置',
   Collapse: '展开',
+  Download: '下载',
+  'Select File': '选择文件',
   'Add record': '新增',
   'Delete {n} record': '批量删除 | 删除 {n} 条数据 | 删除 {n} 条数据',
   'Are you sure to delete?': '请确认是否删除？',

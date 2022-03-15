@@ -48,6 +48,8 @@ model User {
   permissions Permission[]
   /// @Omit
   Token       Token[]
+  /// @Omit
+  Profile     Profile[]
 }
 
 /// @Permission write: auth_control
@@ -96,6 +98,17 @@ model Token {
   refreshToken String
   ip           String?
   createdAt    DateTime @default(now())
+}
+
+model Profile {
+  id        Int       @id @default(autoincrement())
+  userId    Int       @unique
+  /// @Filter
+  /// @RefShowField username
+  user      User      @relation(fields: [userId], references: [id])
+  /// @Upload bucket: avatar, secure: false, image: true
+  avatar    String?
+  updatedAt DateTime? @updatedAt
 }
 
 // enum decorator is optional, the values are as i18n key

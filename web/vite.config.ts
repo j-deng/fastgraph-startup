@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
       // dev config
       server: {
         proxy: {
-          '/graphql': 'http://localhost:4000'
+          '/graphql': 'http://localhost:4000/graphql'
         }
       }
     }

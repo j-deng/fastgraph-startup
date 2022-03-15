@@ -1,12 +1,12 @@
 import {
   ApolloClient,
   ApolloLink,
-  createHttpLink,
   fromPromise,
   InMemoryCache
 } from '@apollo/client/core'
 import { onError } from '@apollo/client/link/error'
 import { setContext } from '@apollo/client/link/context'
+import { createUploadLink } from 'apollo-upload-client'
 import router from './routes'
 import { store } from './store'
 import {
@@ -19,7 +19,7 @@ import {
 let _currentSchemaVersion = localStorage.getItem('schemaVersion')
 
 const makeAuthLink = (accessToken?: string) => {
-  const httpLink = createHttpLink({
+  const httpLink = createUploadLink({
     uri:
       (import.meta.env.GRAPHQL_URL as string) ||
       `${location.protocol}//${location.host}/graphql`
