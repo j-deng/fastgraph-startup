@@ -764,10 +764,10 @@ extract-files@^11.0.0:
   resolved "https://registry.npmmirror.com/extract-files/-/extract-files-11.0.0.tgz#b72d428712f787eef1f5193aff8ab5351ca8469a"
   integrity sha512-FuoE1qtbJ4bBVvv94CC7s0oTnKUGvQs+Rjf1L2SJFfS+HTVVjhPFtehPdQ0JiGPqVNfSSZvL5yzHHQq2Z4WNhQ==
 
-fastgraph-vue@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.npmmirror.com/fastgraph-vue/-/fastgraph-vue-0.1.2.tgz#6fa0473b8645747729f18c126fe225b8872927f1"
-  integrity sha512-VgexvAU0TNgvoIhLUE/1rTr5pbJK5FDB3s4OM+eAV5eKl7475qpjJOHVCK4qdeEoKd/M6JeLJywMqNpQDw9I0w==
+fastgraph-vue@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npmmirror.com/fastgraph-vue/-/fastgraph-vue-0.1.4.tgz#9df03e98cdddf3cb8fd0faa7427be620a8e40d9c"
+  integrity sha512-kTrwgdfnT2PHSpJwXfHbzZdg6mpPtRFUwm8itidz7d2cvFkX9zih3W9A7IpkUUJgwFq6l221lB0alOJgUUBWqQ==
   dependencies:
     joi "^17.6.0"
     lodash-es "^4.17.21"
@@ -914,6 +914,11 @@ is-regex@^1.0.3:
   dependencies:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
+
+joi-messages-zh_cn@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.npmmirror.com/joi-messages-zh_cn/-/joi-messages-zh_cn-17.0.1.tgz#44d2cdf6b56f126309690a5dc615607987030d6b"
+  integrity sha512-PyJxJ/b3Q7OSmwKNXORcAFxUnOYibcqDUMWn3rjKHVschWnh3JnjFVb858+D8OFGYWNDg6DP/90KCGast8Ri6w==
 
 joi@^17.6.0:
   version "17.6.0"
