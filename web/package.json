@@ -15,7 +15,7 @@
     "ant-design-vue": "^3.0.0-beta.10",
     "apollo-upload-client": "^17.0.0",
     "echarts": "^5.3.0",
-    "fastgraph-vue": "^0.1.4",
+    "fastgraph-vue": "^0.1.5",
     "graphql": "^16.3.0",
     "graphql-tag": "^2.12.6",
     "joi": "^17.6.0",

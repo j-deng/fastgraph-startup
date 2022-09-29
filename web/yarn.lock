@@ -782,10 +782,10 @@ extract-files@^11.0.0:
   resolved "https://registry.npmmirror.com/extract-files/-/extract-files-11.0.0.tgz"
   integrity sha512-FuoE1qtbJ4bBVvv94CC7s0oTnKUGvQs+Rjf1L2SJFfS+HTVVjhPFtehPdQ0JiGPqVNfSSZvL5yzHHQq2Z4WNhQ==
 
-fastgraph-vue@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/fastgraph-vue/-/fastgraph-vue-0.1.4.tgz#9df03e98cdddf3cb8fd0faa7427be620a8e40d9c"
-  integrity sha512-kTrwgdfnT2PHSpJwXfHbzZdg6mpPtRFUwm8itidz7d2cvFkX9zih3W9A7IpkUUJgwFq6l221lB0alOJgUUBWqQ==
+fastgraph-vue@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/fastgraph-vue/-/fastgraph-vue-0.1.5.tgz#cc962a0daf983c43d12d486f43cbeed949952565"
+  integrity sha512-zqiyofFxxViag/vk6xIaT7rWtUOwFcyarbpa5ZlVy2w1hWxxlevvJIZcQUd8bBmndDcXMNVJkiJNRJeI8gwgVg==
   dependencies:
     joi "^17.6.0"
     lodash-es "^4.17.21"
