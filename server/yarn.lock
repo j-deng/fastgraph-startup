@@ -2301,10 +2301,10 @@ fast-xml-parser@^3.17.5:
   dependencies:
     strnum "^1.0.4"
 
-fastgraph-node@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/fastgraph-node/-/fastgraph-node-0.1.5.tgz#bb1e32b48df13ddb0e388319a5a6c6e28042fa01"
-  integrity sha512-M7maWBqDJNx+u0stlTFbj8sUdGOd1gnDOCY6Q/Ex0zgjAUNZlU128FZx5jtToXPmlvCNVW4bLdhiesgVyZzO4A==
+fastgraph-node@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/fastgraph-node/-/fastgraph-node-0.1.6.tgz#9c8f8536f4b278500c070006c2a111378520c3d3"
+  integrity sha512-iGBJCY5q2hr/ag5dVKEQ7F8pkOK8mHNSsPCy/Au6eWbBajBXj0XvCQ+DvBssb//qyxPNGSIych0t+F3YIlv8Nw==
   dependencies:
     ali-oss "^6.17.1"
     bcrypt "^5.0.1"
