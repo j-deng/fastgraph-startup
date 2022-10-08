@@ -33,7 +33,10 @@
             background: '#fff',
             padding: '24px',
             margin: 0,
-            minHeight: 'calc(100vh - 54px - 64px - 24px)'
+            // header: 64, breadcrumb: 54, layout-padding: 24
+            minHeight: `calc(100vh - ${
+              selectedKeys[0] === 'home' ? 24 : 54
+            }px - 64px - 24px)`
           }"
         >
           <router-view></router-view>

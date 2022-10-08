@@ -15,15 +15,7 @@
         <Resource
           resourceKey="UserRegisterCount"
           :showTable="false"
-          :chartStyle="{ width: '100%' }"
-          :chartOptions="{
-            grid: {
-              left: '0%',
-              right: '0%',
-              bottom: '0%',
-              containLabel: true
-            }
-          }"
+          :chartStyle="chartStyle"
         />
       </a-card>
     </a-col>
@@ -35,7 +27,7 @@
         <Resource
           resourceKey="PigPriceFlat"
           :showTable="false"
-          :chartStyle="{ width: '100%' }"
+          :chartStyle="chartStyle"
         />
       </a-card>
     </a-col>
@@ -95,7 +87,10 @@ export default defineComponent({
   components: { Resource },
 
   setup() {
-    return { chartOptions }
+    return {
+      chartOptions,
+      chartStyle: { width: '100%', marginBottom: '-24px' }
+    }
   }
 })
 </script>

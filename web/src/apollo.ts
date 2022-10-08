@@ -20,9 +20,7 @@ let _currentSchemaVersion = localStorage.getItem('schemaVersion')
 
 const makeAuthLink = (accessToken?: string) => {
   const httpLink = createUploadLink({
-    uri:
-      (import.meta.env.GRAPHQL_URL as string) ||
-      `${location.protocol}//${location.host}/graphql`
+    uri: (import.meta.env.GRAPHQL_URL as string) || `/graphql`
   })
 
   const authLink = setContext((_, { headers }) => {

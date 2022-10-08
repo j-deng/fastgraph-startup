@@ -47,7 +47,7 @@ class UserRegisterCount {
     return {
       data: await prisma.$queryRawUnsafe(
         `
-        select date_trunc('day', "dateJoined") AS "dateRegister", count(*)
+        select date_trunc('day', "dateJoined", 'Asia/Shanghai') AS "dateRegister", count(*)
         from "User"
         where "dateJoined" > $1
         group by "dateRegister"

@@ -74,8 +74,10 @@ export default function useMenus(schema: Ref<any>) {
     children: { resource: string; name?: string }[]
   }) => {
     const children = options.children
-      .filter(({ resource }) =>
-        hasResourceIndexPermission(schema.value[resource])
+      .filter(
+        ({ resource }) =>
+          !schema.value[resource] ||
+          hasResourceIndexPermission(schema.value[resource])
       )
       .map(({ resource, name }) => ({
         name: name || resource,
